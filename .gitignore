@@ -3,3 +3,6 @@
 /.sencha
 /bootstrap.*
 /sass
+/nbproject/private/
+/nbproject/*
+/nbproject
