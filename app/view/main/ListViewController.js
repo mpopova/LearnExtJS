@@ -13,5 +13,19 @@ Ext.define('QuickStart.view.main.ListViewController', {
                 }
             }
         });
+       
+    },
+    onPopupFormWeather: function (view, index, item, record) {
+        Ext.Viewport.add({
+            xtype: 'popupform',
+            width: 400,
+            record: record,
+            viewModel : {
+                data: {
+                    weather: record
+                }
+            }
+        });
+       
     }
 });
