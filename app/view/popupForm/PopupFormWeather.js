@@ -22,9 +22,9 @@ Ext.define('QuickStart.view.main.PopupFormWeather', {
 
     }, {
         xtype: 'textfield',
-        name: 'temp_c',
-        label: 'temp_c',
-        bind: '{weather.temp_c}'
+        name: 'region',
+        label: 'region',
+        bind: '{weather.region}'
 
     },{
         xtype: 'toolbar',
