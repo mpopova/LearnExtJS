@@ -1,30 +1,31 @@
-Ext.define('QuickStart.view.main.Main', {
-    extend: 'Ext.tab.Panel',
-    controller: 'listview',
-
-    items: [{
-        title: 'Weather in Sofia',
-        xtype: 'grid',
-        iconCls: 'x-fa fa-sun-o',
-        listeners: {
-            itemtap: 'onPopupFormWeather'
-        },
-         store: {
-            type: 'weather',
-            autoLoad: true
-        },
-        columns: [{
-            text: 'Location name',
+Ext.define('QuickStart.view.main.Main',{
+    extend: 'Ext.grid.Grid',
+    xtype: 'grid',
+    title: 'Simpsons',
+    baseCls: 'mainGrid',
+    height: 200,
+    layout: 'fit',
+    fullscreen: true,
+ 
+    store: "QuickStart.store.Store",
+    
+    columns: [
+        {
+            text: 'Name',
             dataIndex: 'name',
-            flex: 1
-        },{
-            text: 'Location name',
-            dataIndex: 'country',
-            flex: 1
-        },{
-            text: 'Location name',
-            dataIndex: 'region',
-            flex: 1
-        }]
-    }]  
-});
+            sortable: false,  // column cannot be sorted
+            width: 250,
+        },
+        {
+            text: 'Email',
+            dataIndex: 'email',
+            hidden: false  // column is initially hidden
+        },
+        {
+            text: 'Phone',
+            dataIndex: 'phone',
+            width: 100
+        }
+    ],
+    autoload: true
+})
