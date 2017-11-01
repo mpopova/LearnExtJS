@@ -1,7 +1,7 @@
 Ext.define('QuickStart.view.main.Main', {
     extend: 'Ext.tab.Panel',
     controller: 'listview',
-
+    
     items: [{
         title: 'Weather in Sofia',
         xtype: 'grid',

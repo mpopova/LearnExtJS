@@ -8,7 +8,8 @@ Ext.define('QuickStart.view.main.PopupFormWeather', {
     floating: true,
     centered: true,
     modal: true,
-
+    zIndex: 9,
+    
     items: [{
         xtype: 'textfield',
         name: 'name',
