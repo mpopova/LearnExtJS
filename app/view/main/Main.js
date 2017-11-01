@@ -1,7 +1,10 @@
 Ext.define('QuickStart.view.main.Main',{
     extend: 'Ext.grid.Grid',
     title: 'Simpsons',
-    xtype: 'grid',
+    cls: 'mainGrid',
+//    xtype: 'grid',
+
+    style: 'background: transparent',
     store:{
        type: 'simpsons',
        autoLoad: true

@@ -1,0 +1,8 @@
+.mainGrid .x-titlebar{
+    background: #FFFCC9;
+    border-bottom: 1px solid #e2e2e2 !important;
+}
+
+.mainGrid .x-titlebar .x-innerhtml{
+    color: black;
+}
