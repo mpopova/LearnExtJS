@@ -16,5 +16,13 @@ Ext.define('QuickStart.view.main.PopupFormWeatherController', {
 
         view.destroy();
         record.commit();
-    }
+    },
+    
+    deleteUpdate: function () {
+        var view = this.getView(),
+            record = view.getRecord();
+
+        view.destroy();
+        record.drop();
+    },
 });

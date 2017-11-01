@@ -40,6 +40,11 @@ Ext.define('QuickStart.view.main.PopupFormWeather', {
             text: 'Cancel',
             iconCls: 'x-fa fa-close',
             handler: 'cancelUpdate'
+        },{
+            xtype: 'button',
+            text: 'Delete',
+            iconCls: 'x-fa fa-trash-o',
+            handler: 'deleteUpdate'
         }]
     }]
 });
