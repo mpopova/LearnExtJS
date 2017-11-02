@@ -5,7 +5,7 @@ Ext.define('QuickStart.store.Weather',{
         type: 'ajax',
         url: 'data/weather.json',
         reader: {
-             type: 'json',
+            type: 'json',
             rootProperty: 'data',
 
             // Do not attempt to load orders inline.

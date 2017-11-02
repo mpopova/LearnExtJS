@@ -3,7 +3,7 @@ Ext.define('QuickStart.view.main.Main', {
     controller: 'listview',
     
     items: [{
-        title: 'Weather in Sofia',
+        title: 'Current weather in Sofia',
         xtype: 'grid',
         iconCls: 'x-fa fa-sun-o',
         listeners: {
@@ -25,7 +25,6 @@ Ext.define('QuickStart.view.main.Main', {
                 encodeHtml: false
             },
              renderer: function (value) {
-                    console.log(value);
                     var str = value;
                     var res = str.split(",");
                     var url = res[0];
@@ -41,5 +40,24 @@ Ext.define('QuickStart.view.main.Main', {
             flex: 1
         }
         ]
-    }]  
+    },
+    {
+        title: 'Forecast for Sofia',
+        xtype: 'grid',
+        iconCls: 'x-fa fa-chevron-right',
+//        listeners: {
+//            itemtap: 'onPopupFormWeather'
+//        },
+         store: {
+            type: 'weather',
+            autoLoad: true
+        },
+        columns: [{
+            text: 'Date',
+            dataIndex: 'forecastDate',
+            flex: 1
+        }
+        ]
+    }
+    ]  
 });

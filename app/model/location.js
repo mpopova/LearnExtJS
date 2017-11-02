@@ -33,7 +33,17 @@ Ext.define('QuickStart.model.location', {
         },
         {name: 'temp', type: 'int', 
             mapping: function(data) {
+                console.log(data);
                 return data.current.temp_c;
+            }
+        },
+        {name: 'forecastDate', type: 'string', 
+//             convert (value, record){         
+//                 console.log(record);
+//            },
+            mapping: function(data) {
+                console.log(data);
+                return data.forecast.forecastday.date;
             }
         }
     ]
