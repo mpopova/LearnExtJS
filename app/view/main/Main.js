@@ -14,17 +14,20 @@ Ext.define('QuickStart.view.main.Main', {
             autoLoad: true
         },
         columns: [{
-            text: 'Location name',
+            text: 'Location',
             dataIndex: 'name',
             flex: 1
-        },{
-            text: 'Location name',
-            dataIndex: 'country',
+        },
+        {
+            text: 'Info',
+            dataIndex: 'weatherInfo',
             flex: 1
-        },{
-            text: 'Location name',
-            dataIndex: 'region',
+        },
+        {
+            text: 'Temperature',
+            dataIndex: 'temp',
             flex: 1
-        }]
+        }
+        ]
     }]  
 });

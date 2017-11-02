@@ -13,21 +13,22 @@ Ext.define('QuickStart.view.main.PopupFormWeather', {
     items: [{
         xtype: 'textfield',
         name: 'name',
-        label: 'Location name',
+        label: 'Location',
         bind: '{weather.name}'
-    }, {
+    },
+    {
         xtype: 'textfield',
-        name: 'country',
-        label: 'weather.country',
-        bind: '{weather.country}'
-
-    }, {
+        name: 'temp',
+        label: 'Info',
+        bind: '{weather.weatherInfo}'
+    },
+    {
         xtype: 'textfield',
-        name: 'region',
-        label: 'region',
-        bind: '{weather.region}'
-
-    },{
+        name: 'temp',
+        label: 'Current temperature',
+        bind: '{weather.temp}'
+    },
+    {
         xtype: 'toolbar',
         docked: 'bottom',
         items: ['->', {
