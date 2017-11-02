@@ -45,11 +45,8 @@ Ext.define('QuickStart.view.main.Main', {
         title: 'Forecast for Sofia',
         xtype: 'grid',
         iconCls: 'x-fa fa-chevron-right',
-//        listeners: {
-//            itemtap: 'onPopupFormWeather'
-//        },
          store: {
-            type: 'weather',
+            type: 'forecast',
             autoLoad: true
         },
         columns: [{
