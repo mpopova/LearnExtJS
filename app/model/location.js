@@ -7,6 +7,11 @@ Ext.define('QuickStart.model.location', {
 		return location;
             }
         },
+        {name: 'image',  type: 'string', 
+            mapping: function(data) {
+		return data.current.condition.icon;
+            }
+        },
         {name: 'weatherInfo',  type: 'string', 
             mapping: function(data) {
 		return data.current.condition.text;

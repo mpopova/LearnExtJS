@@ -19,6 +19,17 @@ Ext.define('QuickStart.view.main.Main', {
             flex: 1
         },
         {
+            text:'Image', 
+            dataIndex:'image',
+            cell: {
+                encodeHtml: false
+            },
+            renderer: function (value) {
+                return '<img src="' + value + '" />'
+            },
+            width: 80
+        },
+        {
             text: 'Info',
             dataIndex: 'weatherInfo',
             flex: 1
