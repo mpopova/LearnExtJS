@@ -7,6 +7,20 @@ Ext.define('QuickStart.model.location', {
 		return location;
             }
         },
+        {name: 'imageAndTxt',  type: 'string', 
+//            convert (value, record){         
+//               if(record.data.current.condition == null){
+//                console.log(this);
+//                var returnValue = record.get('current');
+//                console.log(returnValue);
+//                return returnValue;
+//               }
+//            }
+            mapping: function(data) {
+                var result = data.current.condition.icon + ', ' + data.current.condition.text;
+		return result;
+            }
+        },
         {name: 'image',  type: 'string', 
             mapping: function(data) {
 		return data.current.condition.icon;

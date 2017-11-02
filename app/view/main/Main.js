@@ -19,19 +19,20 @@ Ext.define('QuickStart.view.main.Main', {
             flex: 1
         },
         {
-            text:'Image', 
-            dataIndex:'image',
-            cell: {
+            text: 'imageAndTxt',
+            dataIndex: 'imageAndTxt',
+             cell: {
                 encodeHtml: false
             },
-            renderer: function (value) {
-                return '<img src="' + value + '" />'
-            },
-            width: 80
-        },
-        {
-            text: 'Info',
-            dataIndex: 'weatherInfo',
+             renderer: function (value) {
+                    console.log(value);
+                    var str = value;
+                    var res = str.split(",");
+                    var url = res[0];
+                    var txt = res[1];   
+                    var result = '<img src="' + url + '" />' + '<span> ' + txt + '</span>';
+                    return result;
+                },
             flex: 1
         },
         {

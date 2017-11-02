@@ -19,12 +19,6 @@ Ext.define('QuickStart.view.main.PopupFormWeather', {
     {
         xtype: 'textfield',
         name: 'temp',
-        label: 'Info',
-        bind: '{weather.weatherInfo}'
-    },
-    {
-        xtype: 'textfield',
-        name: 'temp',
         label: 'Current temperature',
         bind: '{weather.temp}'
     },
