@@ -53,6 +53,16 @@ Ext.define('QuickStart.view.main.Main', {
             text: 'Date',
             dataIndex: 'forecastDate',
             flex: 1
+        },
+        {
+            text: 'Min temp',
+            dataIndex: 'minT',
+            flex: 1
+        },
+        {
+            text: 'Max temp',
+            dataIndex: 'maxT',
+            flex: 1
         }
         ]
     }

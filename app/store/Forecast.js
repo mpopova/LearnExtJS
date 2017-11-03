@@ -4,14 +4,9 @@ Ext.define('QuickStart.store.Forecast',{
     proxy: {
         type: 'ajax',
         url: 'data/forecast.json',
-        root: 'forecastday',
         reader: {
             type: 'json',
-            rootProperty: 'forecastday',
-//          rootProperty: function(raw) {
-//                console.log(raw);
-//                return raw.forecast
-//            },
+            rootProperty: 'data',
             implicitIncludes: true
          }
     },
