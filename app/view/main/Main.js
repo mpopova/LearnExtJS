@@ -4,42 +4,85 @@ Ext.define('QuickStart.view.main.Main', {
     
     items: [{
         title: 'Current weather in Sofia',
-        xtype: 'grid',
-        iconCls: 'x-fa fa-sun-o',
+        extend: 'Ext.Component',
+        singleton: true,
+        xtype: 'component',
+        id: 'ariTest',
+        html:'test',
+        
         listeners: {
-            itemtap: 'onPopupFormWeather'
+            staterestore: function() {
+                console.log(this);
+//                console.log(state)
+            }
         },
-         store: {
-            type: 'weather',
-            autoLoad: true
-        },
-        columns: [{
-            text: 'Location',
-            dataIndex: 'name',
-            flex: 1
-        },
-        {
-            text: 'imageAndTxt',
-            dataIndex: 'imageAndTxt',
-             cell: {
-                encodeHtml: false
-            },
-             renderer: function (value) {
-                    var str = value;
-                    var res = str.split(",");
-                    var url = res[0];
-                    var txt = res[1];   
-                    var result = '<img src="' + url + '" />' + '<span> ' + txt + '</span>';
-                    return result;
+
+        handler: function(){
+                    var treeStore = Ext.getStore('Weather');
+                    var bla;
+                    console.log(treeStore);
+                    // treeStore.sync();
                 },
-            flex: 1
-        },
-        {
-            text: 'Temperature',
-            dataIndex: 'temp',
-            flex: 1
-        }
-        ]
+        
+//        store: {
+//            type: 'weather',
+//            autoLoad: true
+//        },
+//        
+//            
+//         initComponent: function() {
+//                this.on('afterrender', this.onAfterRender);
+//            },
+//
+//            onAfterRender: function() {
+//                 var store = Ext.data.StoreManager.lookup("weatherStore"); 
+//       
+//                    console.log(store);
+//            },
+//        listeners: {
+//            initComponent: function() {
+//                 var store = Ext.data.StoreManager.lookup("weatherStore"); 
+//       
+//                    console.log(store);
+//            }
+//        },
+
+//        tpl: new Ext.Template([
+//    '<div name="sss">',
+//        '<span class="sdd">sss</span>',
+//    '</div>',
+//        
+//        ]),
+//        compile: true,
+        iconCls: 'x-fa fa-sun-o',
+
+//        columns: [{
+//            text: 'Location',
+//            dataIndex: 'name',
+//            flex: 1
+//        },
+//        {
+//            text: 'imageAndTxt',
+//            dataIndex: 'imageAndTxt',
+//             cell: {
+//                encodeHtml: false
+//            },
+//             renderer: function (value) {
+//                    var str = value;
+//                    var res = str.split(",");
+//                    var url = res[0];
+//                    var txt = res[1];   
+//                    var result = '<img src="' + url + '" />' + '<span> ' + txt + '</span>';
+//                    return result;
+//                },
+//            flex: 1
+//        },
+//        {
+//            text: 'Temperature',
+//            dataIndex: 'temp',
+//            flex: 1
+//        }
+//        ]
     },
     {
         title: 'Forecast for Sofia',
@@ -68,3 +111,4 @@ Ext.define('QuickStart.view.main.Main', {
     }
     ]  
 });
+

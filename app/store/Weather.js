@@ -1,6 +1,7 @@
 Ext.define('QuickStart.store.Weather',{
     extend: 'Ext.data.Store',
     alias: 'store.weather',
+    storeId: 'weatherStore',
     proxy: {
         type: 'ajax',
         url: 'data/weather.json',
@@ -14,6 +15,7 @@ Ext.define('QuickStart.store.Weather',{
          }
     },
     model: "QuickStart.model.location"
+
     // listeners: {
 
     //     update: function(store, record , operation , modifiedFieldNames) {

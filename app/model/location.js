@@ -38,3 +38,20 @@ Ext.define('QuickStart.model.location', {
         }
     ]
 });
+
+
+console.log(Ext.getStore('weatherStore'));
+
+  var treeStore = Ext.getStore('weatherStore');
+  console.log(treeStore);
+
+  var index = Ext.StoreMgr.lookup("weatherStore");
+  console.log(index);
+
+// this.getSchemedatastoreStore();
+
+// the non-alias version of getStore    
+console.log(Ext.StoreManager.lookup('weatherStore'));
+
+// in case MVC behavior overrides your storeId config
+console.log(Ext.StoreManager.lookup('weatherStore')); 

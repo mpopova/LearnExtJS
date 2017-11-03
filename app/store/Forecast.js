@@ -7,6 +7,9 @@ Ext.define('QuickStart.store.Forecast',{
         reader: {
             type: 'json',
             rootProperty: 'data',
+            
+//           rootProperty: 'requests',
+//            totalProperty: 'totalRequests'
             implicitIncludes: true
          }
     },
