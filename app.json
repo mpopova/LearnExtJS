@@ -201,7 +201,8 @@
      */
     "js": [
         {
-            "path": "${framework.dir}/build/ext-modern-all-debug.js"
+            "path": "http://localhost:80/ext_backend/api.php",
+            "remote": true
         },
         {
             "path": "app.js",

@@ -1,17 +1,15 @@
 Ext.define('QuickStart.store.Forecast',{
     extend: 'Ext.data.Store',
     alias: 'store.forecast',
+
     proxy: {
-        type: 'ajax',
-        url: 'data/forecast.json',
-        reader: {
-            type: 'json',
-            rootProperty: 'data',
-            
-//           rootProperty: 'requests',
-//            totalProperty: 'totalRequests'
-            implicitIncludes: true
-         }
+        type: 'direct',
+        reader:{rootProperty: 'ships'},
+        api: {
+                read: 'QueryDatabase.getResults',
+            }
     },
-    model: "QuickStart.model.Forecast"
+
+    autoLoad: true
+
 });

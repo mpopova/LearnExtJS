@@ -1,7 +1,9 @@
 Ext.define('QuickStart.view.main.Main', {
     extend: 'Ext.tab.Panel',
     controller: 'listview',
-    
+       requires: [
+        'Ext.data.proxy.Direct'
+    ],
     items: [{
         title: 'Current weather in Sofia',
         extend: 'Ext.Component',
@@ -10,12 +12,12 @@ Ext.define('QuickStart.view.main.Main', {
         id: 'ariTest',
         html:'test',
         
-        listeners: {
-            staterestore: function() {
-                console.log(this);
-//                console.log(state)
-            }
-        },
+//         listeners: {
+//             staterestore: function() {
+//                 console.log(this);
+// //                console.log(state)
+//             }
+//         },
 
         handler: function(){
                     var treeStore = Ext.getStore('Weather');
@@ -84,7 +86,7 @@ Ext.define('QuickStart.view.main.Main', {
 //        }
 //        ]
     },
-    {
+            {
         title: 'Forecast for Sofia',
         xtype: 'grid',
         iconCls: 'x-fa fa-chevron-right',
@@ -105,6 +107,31 @@ Ext.define('QuickStart.view.main.Main', {
         {
             text: 'Max temp',
             dataIndex: 'maxT',
+            flex: 1
+        }
+        ]
+    },
+    {
+        title: 'Ships from DB',
+        xtype: 'grid',
+        iconCls: 'x-fa fa-chevron-right',
+         store: {
+            type: 'ships',
+            autoLoad: true
+        },
+        columns: [{
+            text: 'Ship name',
+            dataIndex: 'ship_name',
+            flex: 1
+        },
+        {
+            text: 'Ship type',
+            dataIndex: 'ship_type',
+            flex: 1
+        },
+        {
+            text: 'Flag',
+            dataIndex: 'ship_flag',
             flex: 1
         }
         ]
