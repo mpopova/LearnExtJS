@@ -200,10 +200,10 @@
      *
      */
     "js": [
-        {
-            "path": "http://localhost:80/ext_backend/api.php",
-            "remote": true
-        },
+        // {
+        //     "path": "http://localhost:80/ext_backend/api.php",
+        //     "remote": true
+        // },
         {
             "path": "app.js",
             "bundle": true

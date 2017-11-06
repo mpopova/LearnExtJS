@@ -1,10 +1,35 @@
 Ext.define('QuickStart.view.main.Main', {
     extend: 'Ext.tab.Panel',
     controller: 'listview',
-       requires: [
-        'Ext.data.proxy.Direct'
-    ],
-    items: [{
+    //    requires: [
+    //     'Ext.data.proxy.Direct'
+    // ],
+    items: [
+    {
+        title: 'Components',
+        iconCls: 'x-fa fa-th',
+
+
+         layout: 'hbox',
+
+            items: [
+                {
+                    xtype: 'panel',
+                    flex: 1,
+                    html: 'Left Panel, 1/3rd of total size',
+                     style: 'background-color: #5E99CC;'
+                },
+                {
+                    xtype: 'panel',
+                    flex: 2,
+                    html: 'Right Panel, 2/3rds of total size',
+                    style: 'background-color: #759E60;'
+                }
+            ]
+        // html:'test',
+
+    },
+    {
         title: 'Current weather in Sofia',
         extend: 'Ext.Component',
         singleton: true,
@@ -107,31 +132,6 @@ Ext.define('QuickStart.view.main.Main', {
         {
             text: 'Max temp',
             dataIndex: 'maxT',
-            flex: 1
-        }
-        ]
-    },
-    {
-        title: 'Ships from DB',
-        xtype: 'grid',
-        iconCls: 'x-fa fa-chevron-right',
-         store: {
-            type: 'ships',
-            autoLoad: true
-        },
-        columns: [{
-            text: 'Ship name',
-            dataIndex: 'ship_name',
-            flex: 1
-        },
-        {
-            text: 'Ship type',
-            dataIndex: 'ship_type',
-            flex: 1
-        },
-        {
-            text: 'Flag',
-            dataIndex: 'ship_flag',
             flex: 1
         }
         ]
