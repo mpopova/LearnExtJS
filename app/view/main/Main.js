@@ -8,25 +8,39 @@ Ext.define('QuickStart.view.main.Main', {
     {
         title: 'Components',
         iconCls: 'x-fa fa-th',
-
-
-         layout: 'hbox',
-
-            items: [
-                {
-                    xtype: 'panel',
-                    flex: 1,
-                    html: 'Left Panel, 1/3rd of total size',
-                     style: 'background-color: #5E99CC;'
-                },
-                {
-                    xtype: 'panel',
-                    flex: 2,
-                    html: 'Right Panel, 2/3rds of total size',
-                    style: 'background-color: #759E60;'
-                }
-            ]
-        // html:'test',
+         layout: {
+            type: 'vbox',
+            align: 'stretch'
+        },
+        items: [{
+            xtype: 'container',
+            flex: 1,
+            layout: { 
+                type: 'hbox',
+                align: 'stretch'
+            },
+            items: [{
+                xtype: 'panel',
+                title: '1',
+                html:'First component',
+                flex: 1},
+            {
+                xtype: 'panel',
+                title: '2',
+                html:'Second component',
+                flex: 1}]},
+        {
+            xtype: 'container',
+            flex: 1,
+            layout: { 
+                type: 'hbox',
+                align: 'stretch'
+            },
+            items: [{
+                xtype: 'panel',
+                title: '3',
+                html:'Third component',
+                flex: 1},]},]
 
     },
     {
