@@ -23,9 +23,9 @@ Ext.define('QuickStart.Application', {
     //     Implement this method to do a custom launch.
     // },
 
-    launch: function () {
-       Ext.direct.Manager.addProvider(Ext.REMOTING_API);
-    },
+    // launch: function () {
+    //    Ext.direct.Manager.addProvider(Ext.REMOTING_API);
+    // },
 
 
     onAppUpdate: function () {
