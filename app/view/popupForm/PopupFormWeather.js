@@ -4,7 +4,7 @@ Ext.define('QuickStart.view.main.PopupFormWeather', {
     controller: 'popupformweather',
 
     title: 'Update Record',
-
+   
     floating: true,
     centered: true,
     modal: true,
